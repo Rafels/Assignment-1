@@ -1,5 +1,5 @@
 ﻿
-#H1 Exercise 1 
+# H1 Exercise 1 
 /*
 1. Write a C program that prompts a user to input 6 integers and print the largest.
 */
