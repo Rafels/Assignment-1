@@ -1,4 +1,11 @@
-##Exercise 1
+# Assignment 1
+
+## Exercise 1
+
+### The Code
+
+```c++
+
 /*
 1. Write a C program that prompts a user to input 6 integers and print the largest.
 */
@@ -34,7 +41,9 @@ int main()
 
 	return 0;
 }
-
+```
+### The Results
+```
 Please enter inn your six decimal numbers.
 12
 34
@@ -44,7 +53,9 @@ Please enter inn your six decimal numbers.
 6
 You entered the following numbers: 12  34  23  56  70  6
 The largest number you entered is: 70
+```
 
+```c++
 /*
 2. Write a C program that converts a temperature from Celsius to Fahrenheit and vice versa. 
 (Hint: Fahrenheit = (9/5) * Celsius + 32).
@@ -83,7 +94,9 @@ int main()
 
 		return 0;
 }
-
+```
+### The Results
+```
 Welcome, convert from celcius to fahrenheit or vice versa.
 Enter "c" for celcius or "f" for fahrenheit.
 c
