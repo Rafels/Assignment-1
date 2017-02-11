@@ -179,8 +179,8 @@ THis is a string, not a very long one though.
 The number of words in your string is: 10
 
 /*
-6.  Write a C++ function which takes a single integer parameter, and returns the boolean îTrueî if the given 
-	number is even and îFalseî otherwise.
+6.  Write a C++ function which takes a single integer parameter, and returns the boolean ‚ÄùTrue‚Äù if the given 
+	number is even and ‚ÄùFalse‚Äù otherwise.
 */
 
 #include "iostream"
@@ -291,9 +291,9 @@ Maximum range: 5000
 /*
 8. In mathematics, a triangle is a polygon with three edges and three vertices. 
 Triangles can be classi?ed according to the lengths of their sides. 
-ï An equilateral triangle has all sides the same length. 
-ï An isosceles triangle has two sides of equal length. 
-ï A scalene triangle has all its sides of di?erent lengths. 
+‚Ä¢ An equilateral triangle has all sides the same length. 
+‚Ä¢ An isosceles triangle has two sides of equal length. 
+‚Ä¢ A scalene triangle has all its sides of di?erent lengths. 
 Write a program either in C or C++ that checks whether a given triangle is equilateral, isosceles or scalene.
 */
 
@@ -398,7 +398,7 @@ The fibonacci sequence is: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 
 /*
 10. Implement two C++ functions called swap 1(int,int) and swap 2(int&,int&) that are supposed to swap two values. 
 Display the ?nal values just before the end of each function, and display the results from the main function before and after the call. 
-What do you make of these two functions? (Hint: refer to Fridayís lecture note)
+What do you make of these two functions? (Hint: refer to Friday‚Äôs lecture note)
 */
 #include "iostream"
 
