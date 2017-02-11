@@ -9,7 +9,7 @@
 /*
 1. Write a C program that prompts a user to input 6 integers and print the largest.
 */
-
+#
 #include <stdio.h>
 
 int main()
@@ -42,19 +42,20 @@ int main()
 	return 0;
 }
 ```
-### The Results
+### The Results:
 ```
 Please enter inn your six decimal numbers.
 12
 34
-23
-56
+2356
 70
 6
 You entered the following numbers: 12  34  23  56  70  6
 The largest number you entered is: 70
 ```
+## Exercise 2
 
+### The code:
 ```c++
 /*
 2. Write a C program that converts a temperature from Celsius to Fahrenheit and vice versa. 
@@ -110,7 +111,12 @@ Enter your degrees:
 257.0 degrees fahrenheit equals 125.0 degrees celcius
 Try again or enter q to quit.
 q
+```
+## Exercise 3
 
+### The code;
+
+```c++
 /*
 3. Write a C program that counts the number of blank spaces, new lines and tabs of an input. 
 For example: if the input is "E?ective Programming in C and C++" - the output should be New Lines=1, Blank Spaces=5 and Tabs=0.
@@ -148,7 +154,9 @@ int main()
 
 	return 0;
 }
-
+```
+### The Results
+```
 Welcome
 Please type in your sentence and end it with Ctrl + z.
 Hi, my name is Rafels and this is a c-program.
@@ -157,7 +165,11 @@ Hi, my name is Rafels and this is a c-program.
 The number of blank spaces are: 18
 The number of tabs are: 1
 The number of new lines are: 2
+```
+## Exercise 4
 
+### The Code
+```c++
 /*
 4. Write a C or C++ program that counts the number of words in a given sentence.
 */
@@ -186,11 +198,82 @@ int main()
 
 	return 0;
 }
-
+```
+### The Results:
+```
 Please input a string and end with return
 THis is a string, not a very long one though.
 The number of words in your string is: 10
+```
+## Exercise 5
 
+### The Code:
+```c++
+/*
+5. Write a program in either C or C++ that prints the following pattern. 
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int numberOfRows = 0;
+	cout<<"Please enter the number of rows for your pattern\n";
+	cin>>numberOfRows;
+	for (int i = 0; i < numberOfRows+1;++i)
+	{
+		for (int j = 0; j < i; ++j)
+		{
+			if(j >= 9)
+			{
+				cout<<(j+1)<<" ";
+			}else
+			{
+
+cout<<(j+1)<<"  ";
+			}
+		}
+		cout<<endl;
+	}
+	return 0;
+}
+```
+### The Results:
+```
+Please enter the number of rows for your pattern
+20
+
+1
+1  2
+1  2  3
+1  2  3  4
+1  2  3  4  5
+1  2  3  4  5  6
+1  2  3  4  5  6  7
+1  2  3  4  5  6  7  8
+1  2  3  4  5  6  7  8  9
+1  2  3  4  5  6  7  8  9  10
+1  2  3  4  5  6  7  8  9  10 11
+1  2  3  4  5  6  7  8  9  10 11 12
+1  2  3  4  5  6  7  8  9  10 11 12 13
+1  2  3  4  5  6  7  8  9  10 11 12 13 14
+1  2  3  4  5  6  7  8  9  10 11 12 13 14 15
+1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16
+1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17
+1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18
+1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19
+1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20
+```
+## Exercise 6
+
+### The Code
+```c++
 /*
 6.  Write a C++ function which takes a single integer parameter, and returns the boolean ”True” if the given 
 	number is even and ”False” otherwise.
@@ -230,7 +313,9 @@ bool evenOrUneven (int number)
 	}
 	return even;
 }
-
+```
+### The Results
+```
 Is your number even?
 Please input your integer number:
 124
@@ -240,7 +325,11 @@ Is your number even?
 Please input your integer number:
 123
 False: Your number is un-even..
+```
+## Exercise 7
 
+### The Code
+```c++
 /*
 7. In number theory, a perfect number is a positive integer that is equal to the sum of its proper positive divisors, that 
 is, the sum of its positive divisors excluding the number itself. The smallest perfect number is 6, which is the sum of 1, 2,and 3. 
@@ -295,12 +384,18 @@ void perfectNumber(int minRange, int maxRange)
 		sum = 0;
 	}
 }
-
+```
+## The Results
+```
 Please specify your range, min 1 and max 10k
 Minimal range: 1
 Maximum range: 5000
 6 28 496
+```
+## Exercise 8
 
+## The Code
+```c++
 /*
 8. In mathematics, a triangle is a polygon with three edges and three vertices. 
 Triangles can be classi?ed according to the lengths of their sides. 
@@ -338,25 +433,33 @@ int main()
 
 	return 0;
 }
-
+```
+### The Results
+```
 Please enter the length of the three siden of your triangle
 Side X:12
 Side y:23
 Side Z:50
 Your triangle is scalene
-
+```
+```
 Please enter the length of the three siden of your triangle
 Side X:10
 Side y:10
 Side Z:10
 Your triangle is equilateral
-
+```
+```
 Please enter the length of the three siden of your triangle
 Side X:10
 Side y:10
 Side Z:15
 Your triangle is isosceles
+```
+## Exercise 9
 
+### The Code
+```c++
 /*
 9. In mathematics, the Fibonacci numbers are the sequence of numbers {Fn}8 n=1 de?ned by the linear recurrence 
 equation Fn = Fn-1 + Fn-2 with F1 = F2 = 1, and conventionally de?ning F0 = 0. 
@@ -401,13 +504,18 @@ void fibonacci(int n)
 		
 	}
 }
-
+```
+### The Results
+```
 Please enter the n-number of Fibonacci numbers you wish to calculate.
 Please note that the program can't compute numbers over n = 46.
 30
 The fibonacci sequence is: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765, 10946, 17711, 28657, 46368, 75025, 121393, 196418,
 317811, 514229, 832040,
-
+```
+## Exercise 10
+### The Code
+```c++
 /*
 10. Implement two C++ functions called swap 1(int,int) and swap 2(int&,int&) that are supposed to swap two values. 
 Display the ?nal values just before the end of each function, and display the results from the main function before and after the call. 
@@ -455,7 +563,9 @@ void swap_2(int& a, int& b)
 	b = inbetween;
 	cout<<"Before the swap_2 function ends: a = "<<a<<" and b = "<<b<<"\n";
 }
-
+```
+### The Results
+```
 Please input to integers
 Integer a:20
 Integer b:15
@@ -464,3 +574,4 @@ Before the swap_1 function ends: a = 15 and b = 20
 After being swapped by value your integers are now: a = 20 and b = 15
 Before the swap_2 function ends: a = 15 and b = 20
 After being swapped by referanse your integers are now: a = 15 and b = 20
+```
