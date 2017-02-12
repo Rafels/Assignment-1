@@ -1,6 +1,16 @@
 # Assignment 1
 
+### Rafael Gallegos S929574
+***
+
 ## Exercise 1
+
+**Write a C program that prompts a user to input 6 integers and print the largest.**
+
+In order to solve this exercise the program makes use of an integer array, this simplifies the input and output of the 6 integers entered by the user. By using a for-loop the program is able to first scan in the input, print it out and then compare each value in the array by using an if-statement.
+The if-statement compares the value in the current iteration with the variable "largest", which is initialized to '0'. This works as a fail-safe as long at least one of the six values are positive. If the current value is larger then "largest", then the current value in the array is given to "largest". When the last for-loop is finished the "largest" is displayed and the program ends.
+
+In hinsight, it would be preferable to prompt the user to only use positive values, or at least initialize "largest" to a large negative number.
 
 ### The Code
 
@@ -9,37 +19,35 @@
 /*
 1. Write a C program that prompts a user to input 6 integers and print the largest.
 */
-#
 #include <stdio.h>
 
 int main()
 {
-	int numbers[6] = {0,0,0,0,0,0};
+	int numbers[6] = {0,0,0,0,0,0};                     //The array is declared and initialized to 0.
 	int largest = 0;
 
-
-	printf("Please enter inn your six decimal numbers.\n");
+n
+	printf("Please enter your six decimal numbers.\n"); //First for loop for scaning in the values
 	for (int i = 0; i < 6; ++i)
 	{
-		scanf("%d",&numbers[i]);
+		scanf("%d",&numbers[i]);                    
 	}
-	//scanf("%d\r%d\r%d\r%d\r%d\r%d",&a,&b,&c,&d,&e,&f);
-	printf("You entered the following numbers:");
+	printf("You entered the following numbers:");       //The second for loop, prints out for the user.
 	for (int i = 0; i < 6; ++i)
 	{
 		printf(" %d ",numbers[i]);
-	}
+a	}
 
-	for (int i = 0; i < 6; ++i)
+	for (int i = 0; i < 6; ++i)			    //The last foor loop, which compares the values.
 	{
-		if (numbers[i] > largest)
+c		if (numbers[i] > largest)
 		{
 			largest = numbers[i];
 		}
 	}
-	printf("\nThe largest number you entered is: %d\n", largest);
+	printf("\nThe largest number is: %d", largest);
 
-	return 0;
+	return 0;				
 }
 ```
 ### The Results:
@@ -47,13 +55,22 @@ int main()
 Please enter inn your six decimal numbers.
 12
 34
-2356
+23
+56
 70
 6
 You entered the following numbers: 12  34  23  56  70  6
 The largest number you entered is: 70
 ```
 ## Exercise 2
+
+**Write a C program that converts a temperature from Celsius to Fahrenheit and vice versa.**
+
+In order to solve this exercise, the program uses a mathematical equation that divides, multiplies, sums and subtracts the variables. And because we are dividing values, it is easier to use floating number variables.
+
+The program prompts the user input either "f" or "c" to select which temperature standard to convert from, this character is then used to enter the correct if-statement. Each if-statement prompts the user to enter the degrees, it then converts the value and prints out the results.
+
+Because the two if-statements are inside a while-loop, the user is prompted to repeat the conversion or exit the program by entering "q". When the while-loop exits, the program returns 0 before ending.
 
 ### The code:
 ```c++
