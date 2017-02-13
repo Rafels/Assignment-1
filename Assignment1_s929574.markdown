@@ -26,7 +26,7 @@ int main()
 	int numbers[6] = {0,0,0,0,0,0};                     //The array is declared and initialized to 0.
 	int largest = 0;
 
-n
+
 	printf("Please enter your six decimal numbers.\n"); //First for loop for scaning in the values
 	for (int i = 0; i < 6; ++i)
 	{
@@ -36,11 +36,11 @@ n
 	for (int i = 0; i < 6; ++i)
 	{
 		printf(" %d ",numbers[i]);
-a	}
+	}
 
 	for (int i = 0; i < 6; ++i)			    //The last foor loop, which compares the values.
 	{
-c		if (numbers[i] > largest)
+		if (numbers[i] > largest)
 		{
 			largest = numbers[i];
 		}
@@ -66,11 +66,11 @@ The largest number you entered is: 70
 
 **Write a C program that converts a temperature from Celsius to Fahrenheit and vice versa.**
 
-In order to solve this exercise, the program uses a mathematical equation that divides, multiplies, sums and subtracts the variables. And because we are dividing values, it is easier to use floating number variables.
+In order to solve this exercise, the program uses a mathematical equation that divides, multiplies, sums and subtracts the variables. And because we are dividing values, it is easier to avoid mathematical errors by using floating number variables. Another way of getting arround this is by casting the variables.
 
-The program prompts the user input either "f" or "c" to select which temperature standard to convert from, this character is then used to enter the correct if-statement. Each if-statement prompts the user to enter the degrees, it then converts the value and prints out the results.
+The program prompts the user to input either "f" or "c" in order to select which temperature standard to convert from, this character is then used to enter the correct if-statement. Each if-statement prompts the user to enter the degrees, it then converts the value and prints out the results.
 
-Because the two if-statements are inside a while-loop, the user is prompted to repeat the conversion or exit the program by entering "q". When the while-loop exits, the program returns 0 before ending.
+The if-statements are inside a while-loop which ends if the character "choice" is equal to 'q', this allows the user to repeat the conversion or exit the program by entering "q". When the while-loop exits, the program ends.
 
 ### The code:
 ```c++
@@ -131,12 +131,21 @@ q
 ```
 ## Exercise 3
 
+**Write a C program that counts the number of blank scaces, new lines and tabs of an input.**
+
+The exercise requires a program that can read an input and then count the different characters if they fit the discription. The new line("\n"), the tab("\t") and the blank space(" ") are all represented by characters who have a specift integer-value.
+
+The user is promptet to enter the sentence and end it with "Ctrl + z".
+By using the getchar() function and a while-loop, the program checks the input and counts each of the characters by using an if-statement.
+
+As the results show, the program is a bit flawed. If the user enters a newline before the exit-character, the program will count the newline. Also if the user enters a the exit-characters, the program jumps to a new line and the user needs to input the exit-character again.
+
 ### The code;
 
 ```c++
 /*
 3. Write a C program that counts the number of blank spaces, new lines and tabs of an input. 
-For example: if the input is "E?ective Programming in C and C++" - the output should be New Lines=1, Blank Spaces=5 and Tabs=0.
+For example: if the input is "Effective Programming in C and C++" - the output should be "New Lines=1, Blank Spaces=5 and Tabs=0".
 */
 
 #include <stdio.h>
@@ -184,6 +193,8 @@ The number of tabs are: 1
 The number of new lines are: 2
 ```
 ## Exercise 4
+**Write a C or C++ program that counts the number of words in a given sentence**
+This program is writen in C and uses a character array to store the sentence.
 
 ### The Code
 ```c++
