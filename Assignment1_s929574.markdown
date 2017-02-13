@@ -194,7 +194,13 @@ The number of new lines are: 2
 ```
 ## Exercise 4
 **Write a C or C++ program that counts the number of words in a given sentence**
-This program is writen in C and uses a character array to store the sentence.
+This program is writen in C and uses a character array to store the sentence. The array size is set to 200, in order to insure enough space. The user is promptet to input a sentence, and a scanf function reads the character array. The scanf function uses the [^\n] in order to skip the whitespace between the words.
+
+When the scan is complete, a for-loop runs through the array until the character-calue is equal to the null terminator(\0). While the for-loop is running an if-statement checks for blank spaces in between the words and ads 1 to the word count if the statement is true.
+The statement also avoids counting double blank spaces by checking the previous character.
+
+Before printing the count, 1 is added in order to have the right amount of words.
+One problem with the program occurs if the user inputs a blank space before ending the sentence, this will then give the wrong word count.
 
 ### The Code
 ```c++
@@ -234,6 +240,19 @@ THis is a string, not a very long one though.
 The number of words in your string is: 10
 ```
 ## Exercise 5
+**Write a program in either C or C++ that prints the following pattern.**
+```
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5
+```
+In order to solve this exercise this program uses a bubble sorter that is comprised of two for-loops that prints out the number in the given pattern.
+First the user is promptet to input the number of rows for the pattern, then the value is scaned and given to "numberOfRows" variable.
+This variable is then set as the maksimum iteration for the first for-loop, the second for-loop uses then the current itteration of the first for-loop as it's maksimum. This allows the program to print out the pattern. In the first 10 iterations double spacing is used, then the program uses a single spacing. This is because of the size of the integer that is printet.
+
+The obvious limitation of the program is the size of the pattern, it will print out wrong pattern if the size is to big.
 
 ### The Code:
 ```c++
@@ -264,7 +283,7 @@ int main()
 			}else
 			{
 
-cout<<(j+1)<<"  ";
+				cout<<(j+1)<<"  ";
 			}
 		}
 		cout<<endl;
@@ -299,6 +318,13 @@ Please enter the number of rows for your pattern
 1  2  3  4  5  6  7  8  9  10 11 12 13 14 15 16 17 18 19 20
 ```
 ## Exercise 6
+***Write a C++ function which takes a single integer parameter, and returns the boolean "True" if the given number is even and "False" otherwise***
+
+This program uses a function to check if the value is even, in order to use functions i C++ the function must be initialized at the start. 
+At the start the user is promptet to input a postive integer value, the value is then used in the function "evenOrUneven" and returns the value to the bool "even".
+The funtion works by using an if-else-statement that checks it the number with modulo 2 is equal to zero. The function then returns a boolean value, 1 if the number is even or 0 if the value is uneven.
+
+After the funtion has run the program runs "even" through an if-else-statement and prints out the result accordingly.
 
 ### The Code
 ```c++
@@ -355,6 +381,17 @@ Please input your integer number:
 False: Your number is un-even..
 ```
 ## Exercise 7
+***In number theory, a perfect number is a positive integer that is equal to the sum of its proper positive divisors, that 
+is, the sum of its positive divisors excluding the number itself. The smallest perfect number is 6, which is the sum of 1, 2,and 3. 
+Other perfect numbers are 28, 496, and 8,128. Write a program in either C or C++ to print all perfect numbers in given range 
+using a function.***
+
+
+This exercise is quite a challenge because it uses mathematical consept which are difficult to understand and therefore difficult to implement in a code. 
+
+In order to solve the problem, the program uses a function with a double for-loop that checks the current value with all of the previous values. An if-statement then checks if the current value is dividable with the previous values, and adds the value together with "sum" and adds it to "sum". If the sum of all the values equals to the current iteration of the first for-loop, it prints out the iteration as a perfect number. The function then sets the sum to zero before starting to look for the next number.
+
+The main program is quite simple, as it only prompts the user to select the range. It also warns the user to avoid zero and values over 10k, as the program will use quite som time to find the larger numbers. As a precation i the function aborts if the range is out of bounds.
 
 ### The Code
 ```c++
@@ -369,6 +406,7 @@ using a function.
 using namespace std;
 
 void perfectNumber(int minRange, int maxRange);
+
 
 int main()
 {
@@ -412,6 +450,8 @@ void perfectNumber(int minRange, int maxRange)
 		sum = 0;
 	}
 }
+
+
 ```
 ## The Results
 ```
