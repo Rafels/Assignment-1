@@ -10,7 +10,7 @@
 In order to solve this exercise the program makes use of an integer array, this simplifies the input and output of the 6 integers entered by the user. By using a for-loop the program is able to first scan in the input, print it out and then compare each value in the array by using an if-statement.
 The if-statement compares the value in the current iteration with the variable "largest", which is initialized to '0'. This works as a fail-safe as long at least one of the six values are positive. If the current value is larger then "largest", then the current value in the array is given to "largest". When the last for-loop is finished the "largest" is displayed and the program ends.
 
-In hinsight, it would be preferable to prompt the user to only use positive values, or at least initialize "largest" to a large negative number.
+In hindsight, it would be preferable to prompt the user to only use positive values, or at least initialize "largest" to a large negative number.
 
 ### The Code
 
@@ -461,15 +461,22 @@ Maximum range: 5000
 6 28 496
 ```
 ## Exercise 8
+***Write a program either in C or C++ that checks whether a given triangle is equilateral, isosceles or scalene.***
+
+The program starts by prompting the user to enter the lenght of the three sides. When the values have been entered they are compared to each other by using several if-else statements. 
+The first if-else statement is checks if all of the values are equal to each other, then prints out if it is equilateral.
+The second if-else statement checks if two of the values are equal to each other and different from the third value.
+The third and final if-statement checks if all of the values are un-equal to each other.
+Each of the statements print out the result if the statement is true.
 
 ## The Code
 ```c++
 /*
 8. In mathematics, a triangle is a polygon with three edges and three vertices. 
-Triangles can be classi?ed according to the lengths of their sides. 
+Triangles can be classified according to the lengths of their sides. 
 • An equilateral triangle has all sides the same length. 
 • An isosceles triangle has two sides of equal length. 
-• A scalene triangle has all its sides of di?erent lengths. 
+• A scalene triangle has all its sides of different lengths. 
 Write a program either in C or C++ that checks whether a given triangle is equilateral, isosceles or scalene.
 */
 
@@ -525,14 +532,23 @@ Side Z:15
 Your triangle is isosceles
 ```
 ## Exercise 9
+**Implement a C++ function to compute and display the first n numbers of the Fibonacci list, 
+where n is provided as an input by the user.**
+
+In order to solve this exercise the program uses a function that calculates the sum of the two preceding values in an array and sets the sum of the two values as the current value. By initializing the array with the two first fibonacci numbers; {1,1}, it is easier to calculate the next numbers in the array. 
+At the beginning of the program the user is promptet to input the desired number of fibonacci number in the list. the number is scaned and insertet in the function.
+
+The function uses a for-loop which runs through the array and prints out the current value. In order to have a cleaner output, the function uses an if statement that ads a new line if the iteration is at a certain point.
+
+As the program uses integer numbers, it is limited to a list of only 46 fibonacci numbers.
 
 ### The Code
 ```c++
 /*
-9. In mathematics, the Fibonacci numbers are the sequence of numbers {Fn}8 n=1 de?ned by the linear recurrence 
-equation Fn = Fn-1 + Fn-2 with F1 = F2 = 1, and conventionally de?ning F0 = 0. 
-The ?rst few Fibonacci numbers are 1, 1, 2, 3, 5, 8, 13, 21,...etc. 
-Implement a C++ function to compute and display the ?rst n numbers of the Fibonacci list, 
+9. In mathematics, the Fibonacci numbers are the sequence of numbers {Fn}∞ n=1 deﬁned by the linear recurrence 
+equation Fn = Fn−1 + Fn−2 with F1 = F2 = 1, and conventionally deﬁning F0 = 0. 
+The ﬁrst few Fibonacci numbers are 1, 1, 2, 3, 5, 8, 13, 21,...etc. 
+Implement a C++ function to compute and display the ﬁrst n numbers of the Fibonacci list, 
 where n is provided as an input by the user.
 */
 
@@ -562,7 +578,7 @@ void fibonacci(int n)
 	int fib = 0;
 	for (int i = 0; i < (n-2); ++i)
 	{
-		if (i==25 || i == 42)
+		if (i==25 || i == 42) //only used to make it easier to read in cmd.
 		{
 			cout<<"\n";
 		}
@@ -582,11 +598,17 @@ The fibonacci sequence is: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 
 317811, 514229, 832040,
 ```
 ## Exercise 10
+This exercise is meant to illustrate the difference of swapping values by referance and by value.
+In order to complete the exercise the program uses two functions that swap values, which requires a variable "inbetween" that stores one of the values before the swap, this is done in order to not loose the value. Both of the funtions print out the values before ending, the values are then printet in main in order to illustrate how the funtions work.
+
+The functions are quite similar in how they work, the difference is that swap_2 uses the address of the variables and not the actual value, this result in the values being swapped globaly and not only localy in the function, like in the function swap_1.
+
+
 ### The Code
 ```c++
 /*
 10. Implement two C++ functions called swap 1(int,int) and swap 2(int&,int&) that are supposed to swap two values. 
-Display the ?nal values just before the end of each function, and display the results from the main function before and after the call. 
+Display the ﬁnal values just before the end of each function, and display the results from the main function before and after the call. 
 What do you make of these two functions? (Hint: refer to Friday’s lecture note)
 */
 #include "iostream"
