@@ -7,10 +7,11 @@
 
 **Write a C program that prompts a user to input 6 integers and print the largest.**
 
-In order to solve this exercise the program makes use of an integer array, this simplifies the input and output of the 6 integers entered by the user. By using a for-loop the program is able to first scan in the input, print it out and then compare each value in the array by using an if-statement.
-The if-statement compares the value in the current iteration with the variable "largest", which is initialized to '0'. This works as a fail-safe as long at least one of the six values are positive. If the current value is larger then "largest", then the current value in the array is given to "largest". When the last for-loop is finished the "largest" is displayed and the program ends.
+To solve the exercise the program makes use of an integer array, this simplifies the input and output of the 6 integers entered by the user. By using a for-loop the program can first scan in the input, print it out and then compare each value in the array by using an if-statement.
+The if-statement compares the value in the current iteration with the variable "largest", which is initialized to '0'. This works as a fail-safe as long at least one of the six values are positive. If the current value is larger than "largest", then the current value in the array is given to "largest". When the last for-loop is finished the "largest" is displayed and the program ends.
 
 In hindsight, it would be preferable to prompt the user to only use positive values, or at least initialize "largest" to a large negative number.
+
 
 ### The Code
 
@@ -66,11 +67,12 @@ The largest number you entered is: 70
 
 **Write a C program that converts a temperature from Celsius to Fahrenheit and vice versa.**
 
-In order to solve this exercise, the program uses a mathematical equation that divides, multiplies, sums and subtracts the variables. And because we are dividing values, it is easier to avoid mathematical errors by using floating number variables. Another way of getting arround this is by casting the variables.
+To solve this exercise, the program uses a mathematical equation that divides, multiplies, sums and subtracts the variables. And because we are dividing values, it is easier to avoid mathematical errors by using floating number variables. Another way of getting around this is by casting the variables.
 
-The program prompts the user to input either "f" or "c" in order to select which temperature standard to convert from, this character is then used to enter the correct if-statement. Each if-statement prompts the user to enter the degrees, it then converts the value and prints out the results.
+The program prompts the user to input either "f" or "c" to select which temperature standard to convert from, this character is then used to enter the correct if-statement. Each if-statement prompts the user to enter the degrees, it then converts the value and prints out the results.
 
 The if-statements are inside a while-loop which ends if the character "choice" is equal to 'q', this allows the user to repeat the conversion or exit the program by entering "q". When the while-loop exits, the program ends.
+
 
 ### The code:
 ```c++
@@ -133,12 +135,12 @@ q
 
 **Write a C program that counts the number of blank scaces, new lines and tabs of an input.**
 
-The exercise requires a program that can read an input and then count the different characters if they fit the discription. The new line("\n"), the tab("\t") and the blank space(" ") are all represented by characters who have a specift integer-value.
+The exercise requires a program that can read an input and then count the different characters if they fit the description. The new line("\n"), the tab("\t") and the blank space (" ") are all represented by characters who have a specific integer-value.
 
-The user is promptet to enter the sentence and end it with "Ctrl + z".
+The user is prompted to enter the sentence and end it with "Ctrl + z".
 By using the getchar() function and a while-loop, the program checks the input and counts each of the characters by using an if-statement.
 
-As the results show, the program is a bit flawed. If the user enters a newline before the exit-character, the program will count the newline. Also if the user enters a the exit-characters, the program jumps to a new line and the user needs to input the exit-character again.
+As the results show, the program is a bit flawed. If the user enters a newline before the exit-character, the program will count the newline. Also, if the user enters the exit-characters, the program jumps to a new line and the user needs to input the exit-character again.
 
 ### The code;
 
@@ -194,12 +196,12 @@ The number of new lines are: 2
 ```
 ## Exercise 4
 **Write a C or C++ program that counts the number of words in a given sentence**
-This program is writen in C and uses a character array to store the sentence. The array size is set to 200, in order to insure enough space. The user is promptet to input a sentence, and a scanf function reads the character array. The scanf function uses the [^\n] in order to skip the whitespace between the words.
+This program is written in C and uses a character array to store the sentence. The array size is set to 200, to insure enough space. The user is prompted to input a sentence, and a scanf function reads the character array. The scanf function uses the [^\n] to skip the whitespace between the words.
 
-When the scan is complete, a for-loop runs through the array until the character-calue is equal to the null terminator(\0). While the for-loop is running an if-statement checks for blank spaces in between the words and ads 1 to the word count if the statement is true.
+When the scan is complete, a for-loop runs through the array until the character-value is equal to the null terminator (\0). While the for-loop is running an if-statement checks for blank spaces in between the words and ads 1 to the word count if the statement is true.
 The statement also avoids counting double blank spaces by checking the previous character.
 
-Before printing the count, 1 is added in order to have the right amount of words.
+Before printing the count, 1 is added to have the right amount of words.
 One problem with the program occurs if the user inputs a blank space before ending the sentence, this will then give the wrong word count.
 
 ### The Code
@@ -248,11 +250,11 @@ The number of words in your string is: 10
 1 2 3 4 
 1 2 3 4 5
 ```
-In order to solve this exercise this program uses a bubble sorter that is comprised of two for-loops that prints out the number in the given pattern.
-First the user is promptet to input the number of rows for the pattern, then the value is scaned and given to "numberOfRows" variable.
-This variable is then set as the maksimum iteration for the first for-loop, the second for-loop uses then the current itteration of the first for-loop as it's maksimum. This allows the program to print out the pattern. In the first 10 iterations double spacing is used, then the program uses a single spacing. This is because of the size of the integer that is printet.
+To solve the exercise this program uses a bubble sorter that is comprised of two for-loops that prints out the number in the given pattern.
+First the user is prompted to input the number of rows for the pattern, then the value is scaned and given to "numberOfRows" variable.
+This variable is then set as the maximum iteration for the first for-loop, the second for-loop uses then the current iteration of the first for-loop as it's maximum. This allows the program to print out the pattern. In the first 10 iterations, double spacing is used, then the program uses a single spacing. This is because of the size of the integer that is printed.
 
-The obvious limitation of the program is the size of the pattern, it will print out wrong pattern if the size is to big.
+The obvious limitation of the program is the size of the pattern, it will print out wrong pattern if the size is too big.
 
 ### The Code:
 ```c++
@@ -321,10 +323,10 @@ Please enter the number of rows for your pattern
 ***Write a C++ function which takes a single integer parameter, and returns the boolean "True" if the given number is even and "False" otherwise***
 
 This program uses a function to check if the value is even, in order to use functions i C++ the function must be initialized at the start. 
-At the start the user is promptet to input a postive integer value, the value is then used in the function "evenOrUneven" and returns the value to the bool "even".
-The funtion works by using an if-else-statement that checks it the number with modulo 2 is equal to zero. The function then returns a boolean value, 1 if the number is even or 0 if the value is uneven.
+At the start the user is prompted to input a positive integer value, the value is then used in the function "evenOrUneven" and returns the value to the bool "even".
+The function works by using an if-else-statement that checks it the number with modulo 2 is equal to zero. The function then returns a Boolean value, 1 if the number is even or 0 if the value is uneven.
 
-After the funtion has run the program runs "even" through an if-else-statement and prints out the result accordingly.
+After the function is finished, the program runs "even" through an if-else-statement and prints out the result accordingly.
 
 ### The Code
 ```c++
@@ -387,11 +389,11 @@ Other perfect numbers are 28, 496, and 8,128. Write a program in either C or C++
 using a function.***
 
 
-This exercise is quite a challenge because it uses mathematical consept which are difficult to understand and therefore difficult to implement in a code. 
+This exercise is quite a challenge because it uses a mathematical concept which is difficult to understand and therefore difficult to implement in a code. 
 
-In order to solve the problem, the program uses a function with a double for-loop that checks the current value with all of the previous values. An if-statement then checks if the current value is dividable with the previous values, and adds the value together with "sum" and adds it to "sum". If the sum of all the values equals to the current iteration of the first for-loop, it prints out the iteration as a perfect number. The function then sets the sum to zero before starting to look for the next number.
+To solve the problem, the program uses a function with a double for-loop that checks the current value with all the previous values. An if-statement then checks if the current value is dividable with the previous values, and adds the value together with "sum" and adds it to "sum". If the sum of all the values equals to the current iteration of the first for-loop, it prints out the iteration as a perfect number. The function then sets the sum to zero before starting to look for the next number.
 
-The main program is quite simple, as it only prompts the user to select the range. It also warns the user to avoid zero and values over 10k, as the program will use quite som time to find the larger numbers. As a precation i the function aborts if the range is out of bounds.
+The main program is quite simple, as it only prompts the user to select the range. It also warns the user to avoid zero and values over 10k, as the program will use quite some time to find the larger numbers. As a precaution the function aborts if the range is out of bounds.
 
 ### The Code
 ```c++
@@ -463,10 +465,10 @@ Maximum range: 5000
 ## Exercise 8
 ***Write a program either in C or C++ that checks whether a given triangle is equilateral, isosceles or scalene.***
 
-The program starts by prompting the user to enter the lenght of the three sides. When the values have been entered they are compared to each other by using several if-else statements. 
-The first if-else statement is checks if all of the values are equal to each other, then prints out if it is equilateral.
-The second if-else statement checks if two of the values are equal to each other and different from the third value.
-The third and final if-statement checks if all of the values are un-equal to each other.
+The program starts by prompting the user to enter the length of the three sides. When the values have been entered, they are compared to each other by using several if-else statements. 
+The first if-else statement is checks if all the values are equal, then prints out if it is equilateral.
+The second if-else statement checks if two of the values are equal and different from the third value.
+The third and final if-statement checks if all the values are un-equal.
 Each of the statements print out the result if the statement is true.
 
 ## The Code
@@ -535,12 +537,12 @@ Your triangle is isosceles
 **Implement a C++ function to compute and display the first n numbers of the Fibonacci list, 
 where n is provided as an input by the user.**
 
-In order to solve this exercise the program uses a function that calculates the sum of the two preceding values in an array and sets the sum of the two values as the current value. By initializing the array with the two first fibonacci numbers; {1,1}, it is easier to calculate the next numbers in the array. 
-At the beginning of the program the user is promptet to input the desired number of fibonacci number in the list. the number is scaned and insertet in the function.
+To solve the exercise the program uses a function that calculates the sum of the two preceding values in an array and sets the sum of the two values as the current value. By initializing the array with the two first Fibonacci numbers; {1,1}, it is easier to calculate the next numbers in the array. 
+At the beginning of the program the user is prompted to input the desired number of Fibonacci number in the list. the number is scanned and inserted in the function.
 
-The function uses a for-loop which runs through the array and prints out the current value. In order to have a cleaner output, the function uses an if statement that ads a new line if the iteration is at a certain point.
+The function uses a for-loop which runs through the array and prints out the current value. To have a cleaner output, the function uses an if statement that ads a new line if the iteration is at a certain point.
 
-As the program uses integer numbers, it is limited to a list of only 46 fibonacci numbers.
+As the program uses integer numbers, it is limited to a list of only 46 Fibonacci numbers.
 
 ### The Code
 ```c++
@@ -598,10 +600,10 @@ The fibonacci sequence is: 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 
 317811, 514229, 832040,
 ```
 ## Exercise 10
-This exercise is meant to illustrate the difference of swapping values by referance and by value.
-In order to complete the exercise the program uses two functions that swap values, which requires a variable "inbetween" that stores one of the values before the swap, this is done in order to not loose the value. Both of the funtions print out the values before ending, the values are then printet in main in order to illustrate how the funtions work.
+This exercise is meant to illustrate the difference of swapping values by reference and by value.
+To complete the exercise the program uses two functions that swap values, which requires a variable "inbetween" that stores one of the values before the swap, this is done to not lose the value. Both functions print out the values before ending, the values are then printed in main to illustrate how the functions work.
 
-The functions are quite similar in how they work, the difference is that swap_2 uses the address of the variables and not the actual value, this result in the values being swapped globaly and not only localy in the function, like in the function swap_1.
+The functions are quite similar in how they work, the difference is that swap_2 uses the address of the variables and not the actual value, this result in the values being swapped globally and not only locally in the function, like in the function swap_1.
 
 
 ### The Code
